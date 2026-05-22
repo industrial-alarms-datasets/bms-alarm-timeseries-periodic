@@ -19,7 +19,7 @@ DATA_FOLDER = PROJECT_ROOT / "data"
 TRAIN_TS_FILE = DATA_FOLDER / "DSPub237.parquet"
 TRAIN_META_FILE = DATA_FOLDER / "DSPub237Metadata.parquet"
 TEST_TS_FILE = DATA_FOLDER / "DSPub237_test.parquet"
-TEST_META_FILE = DATA_FOLDER / "DSPub237_testMetadata.parquet"
+TEST_META_FILE = DATA_FOLDER / "DSPub237Metadata_test.parquet"
 DATASET_URL = "https://zenodo.org/records/19855612"
 
 
