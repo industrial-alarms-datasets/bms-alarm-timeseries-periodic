@@ -20,6 +20,7 @@ TRAIN_TS_FILE = DATA_FOLDER / "DSPub237.parquet"
 TRAIN_META_FILE = DATA_FOLDER / "DSPub237Metadata.parquet"
 TEST_TS_FILE = DATA_FOLDER / "DSPub237_test.parquet"
 TEST_META_FILE = DATA_FOLDER / "DSPub237Metadata_test.parquet"
+REJECTED_TS_FILE = DATA_FOLDER / "DSPub237_rejected_ambiguous.parquet"
 DATASET_URL = "https://zenodo.org/records/19855612"
 
 
@@ -39,7 +40,7 @@ def dev(session: Session) -> None:
 
     # Check presence of data
     DATA_FOLDER.mkdir(parents=True, exist_ok=True)
-    for f in (TRAIN_TS_FILE, TRAIN_META_FILE, TEST_TS_FILE, TEST_META_FILE):
+    for f in (TRAIN_TS_FILE, TRAIN_META_FILE, TEST_TS_FILE, TEST_META_FILE, REJECTED_TS_FILE):
         if not f.exists():
             session.error(f"Data File not found: '{f.as_posix()}'. Please download it from {DATASET_URL}")
 
